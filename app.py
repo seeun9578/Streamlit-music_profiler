@@ -30,8 +30,8 @@ def get_recommendations(genre):
 
 def main():
     st.set_page_config(page_title="음악 몰입도 및 취향 진단", layout="centered")
-    st.title("🧬 Music DNA Profiler")
-    st.markdown("#### : 당신의 음악적 라이프스타일을 정밀 분석합니다.")
+    st.title("Music Profiler")
+    st.markdown("#### : 당신의 음악적 취향을 정밀 분석합니다.")
     st.success("Developer Info | 학번: 2025404037 | 이름: 홍세은")
     
     st.divider()
@@ -87,13 +87,12 @@ def main():
             with col2:
                 # 질문 1(장르)에 따른 맞춤형 추천 아티스트 출력
                 selected_genre = responses[0]
-                st.subheader("🎤 추천 아티스트")
+                st.subheader("추천 아티스트")
                 recs = get_recommendations(selected_genre)
                 st.write(f"**{selected_genre}** 취향을 위한 추천:")
                 for artist in recs:
                     st.write(f"- {artist}")
 
-            st.balloons()
             st.divider()
         
 
